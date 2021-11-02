@@ -29,47 +29,5 @@ bash jd_qq_login.sh	#运行后显示二维码后用手机/平板的QQ客户端�
 
 如果系统缺少依赖，脚本会自动安装，支持apt/yum/dnf自动安装依赖环境，如果没有这几个包管理环境，需要手动安装以上依赖。
 
-## 扫码日志如下
 
-京东COOKIE获取工具shell-QQ扫码版
-作者: Hans Yao (hansyow@gmail.com)
-github: https://github.com/hansyao/jd_tools
-website: https://hansyao.github.io
-
-█████████████████████████████████████████
-█████████████████████████████████████████
-████ ▄▄▄▄▄ █▀▄█▀ ▄ █▀███▀▀█ ▀█ ▄▄▄▄▄ ████
-████ █   █ █▄   ▄▀█ █▄▀ ▀█  ▀█ █   █ ████
-████ █▄▄▄█ █ ▀█▀█▄▄ ██▀ █▀▀█▀█ █▄▄▄█ ████
-████▄▄▄▄▄▄▄█ ▀▄█ ▀▄▀ ▀ ▀▄▀ █ █▄▄▄▄▄▄▄████
-████▄ █ █▀▄ ▀█ ▀█ ▄▀█▄▀▀ ▄█▀ ▀ ▄▄▀ ▄▀████
-████▄▄▄█▀▄▄▄▄▄▄██▀▀▀ █▄ █ ▄█▄██ ▄██  ████
-████▄█▄▀▄ ▄▀ █▀▀ █ ▄▀ ▀▄ ▀██▀▄ █▀█▀▀ ████
-█████▄█  █▄▄▀▄ █ ▀██ ▀▄▀█ █▄ ▄▄█▀▀█ █████
-████▀███  ▄  ▀▄▄█▄ █▀██▄█▀ █  ▄▀▄▀▀█▄████
-████▄█ ▄█ ▄█  █▀█ ██▄▀ ▀▀▀█▀█ ▀  ▄█▄▄████
-████▄ ▀ ▄▀▄ ▀ ▀  ▀▄█▄██▀ ▀██▀▄▀▄███▄▀████
-████▄ ▀▄██▄▀▀█    ▄█▀██▄▄▀▀█▀   █▀▄▀ ████
-████▄█▄▄▄▄▄▄  █ █▀ █▄ ▀█▀▄▀▄ ▄▄▄  ▀█▀████
-████ ▄▄▄▄▄ █▄▀  █▄▄▀█▀▄▀▄ ▄▀ █▄█ ▄▄▄█████
-████ █   █ █▀█ █  ▀  ▄▀▀▄ ▀▀   ▄ ▄▀▄█████
-████ █▄▄▄█ █▀▀█▄ █ ▀  ██▄▀ ▀▀ ▀ ▄▀██▄████
-████▄▄▄▄▄▄▄▀ ▀▄████▄█▄█▄█▄██▄▄▄▄█▄█▄█████
-█████████████████████████████████████████
-█████████████████████████████████████████
-
-
-等待QQ客户端扫码登录...'二维码认证中。(781200862)'
-'登录成功！'  'xxxxxx'
-
-京东cookie获取成功:
-TrackerID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-lsid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-pt_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-pt_pin=123413413
-pt_token=rqe141413
-pwdt_id=123413413
-s_key=asfadf1324134134axxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-s_pin=6237416778
-sfstoken=tkadfasdfasdfqewrqewwerqwereewqerqwexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
