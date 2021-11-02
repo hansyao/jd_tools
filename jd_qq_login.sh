@@ -87,8 +87,6 @@ function get_stoken() {
 	local RESP_HEADER=$1
 	local RESP_BODY=$2
 
-	local RISK_JD=$(head /dev/urandom |cksum | md5sum | awk '{print $1}' | tr -d '\r|\n')
-
 	curl -sS -D - \
 		"${ENTRANCE_URL}&returnurl=$(urlencode ${RETURN_URL1})&returnurl=$(urlencode ${RETURN_URL2})" \
 		-A "${UA2}" \
@@ -122,7 +120,7 @@ function get_qq_login_url() {
 		-H "pragma: no-cache" \
 		-H "cache-control: no-cache" \
 		-G \
-		-d "risk_jd[fp]=960ccf37084be65f418c4daeaf58c5da" \
+		-d "risk_jd[fp]=${RISK_JD}" \
 		--compressed \
 		-o "${RESP_BODY}"  \
 		| tr -d '\r' \
@@ -334,7 +332,7 @@ fi
 if [[ ${DEBUG} -eq 1 ]]; then
 	echo -e "jd_cookie: ${COOKIE}"
 fi
-
+	RISK_JD=$(head /dev/urandom |cksum | md5sum | awk '{print $1}' | tr -d '\r|\n')
 	# 获取stoken密钥合并到lstoken cookie
 	get_stoken '/tmp/response_header_stoken' '/tmp/response_body_stoken'
 	LS_TOKEN=$(cat '/tmp/response_header_stoken' | grep -i "^set-cookie" \
