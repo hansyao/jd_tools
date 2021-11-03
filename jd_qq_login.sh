@@ -450,11 +450,11 @@ fi
 	JD_COOKIE_FINAL=$(cat /tmp/response_header_jd_qqcallback | grep -i "^set-cookie:" \
 		| awk  '$2!~"=;" {print $2}' | awk -F ';' '{print $1}')
 	echo
-	RISK_RETURN=$(cat /tmp/response_header_jd_qqcallback | grep -i "^location:" | grep risk | awk '{print $(NF)}')
+	RISK_RETURN=$(cat /tmp/response_header_jd_qqcallback | grep -i "^location:" | grep "risk\|verify" | awk '{print $(NF)}')
 	if [[ -n "${RISK_RETURN}" ]]; then
-		echo "触发京东安全检测，需要扫描以下链接做二次验证, 但本脚本手机验证功能暂未实现"
+		echo "触发京东安全检测，继续用QQ客户端扫描以下二维码做二次验证, 验证完成后再重新运行本脚本一次"
 		echo "请稍后重试..."
-		echo "${RISK_RETURN}" | qrencode -t ANSIUTF8
+		echo "${RISK_RETURN}" | tr -d '\r|\n' | qrencode -t ANSIUTF8
 		return 1
 	fi
 	echo "京东cookie获取成功:"
