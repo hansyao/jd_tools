@@ -1,3 +1,11 @@
+# 京东自动评价机器人
+
+```bash
+curl -sOL https://raw.githubusercontent.com/hansyao/jd_tools/master/jd_eval.sh
+bash jd_eval.sh
+
+```
+
 # QQ扫码获取京东cookie
 
 >一个简单的纯shell脚本实现的QQ扫码获取京东cookie的小工具
